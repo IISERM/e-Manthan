@@ -1,57 +1,19 @@
-<!doctype html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<title>Laravel: A Framework For Web Artisans</title>
-	<meta name="viewport" content="width=device-width">
-	{{ HTML::style('laravel/css/style.css') }}
-</head>
-<body>
-	<div class="wrapper">
-		<header>
-			<h1>Laravel</h1>
-			<h2>A Framework For Web Artisans</h2>
+@layout('template.default')
+@section('body')
+    <div id="slider3" class="nivoSlider">
+        <img title="Picture 1" src="{{ URL::base()."/" }}img/demo/slide_1.jpg" alt="" />
+        <img title="Picture 2" src="{{ URL::base()."/" }}img/demo/slide_2.jpg" alt="" />
+        <img title="Picture 3" src="{{ URL::base()."/" }}img/demo/slide_3.jpg" alt="" />
+    </div>
 
-			<p class="intro-text" style="margin-top: 45px;">
-			</p>
-		</header>
-		<div role="main" class="main">
-			<div class="home">
-				<h2>Learn the terrain.</h2>
 
-				<p>
-					You've landed yourself on our default home page. The route that
-					is generating this page lives at:
-				</p>
+    <div class="one-half">
+        <div class="heading_bg"><h2>Welcome</h2></div>
+        <p>Welcome to the e-Manthan. e-Manthan is a web portal of the popular IISER Mohali students magazine 'Manthan'. After the third Manthan was published in Feb-2012, a need for the e-print version was felt amongst the students. It began with a round of critisism about the latest edition of Manthan by the senior members of the IISER community and an enthusistic rebuttal in the form of calls of expansion by the newest generation of IISERians. The end result was one nightout by one of the spectators and the first look of the e-Manthan was ready. Enjoy the articles and contribute heavily.</p>
+    </div>
 
-				<pre>{{ path('app') }}routes.php</pre>
-
-				<p>And the view sitting before you can be found at:</p>
-
-				<pre>{{ path('app') }}views/home/index.php</pre>
-
-				<h2>Grow in knowledge.</h2>
-
-				<p>
-					Learning to use Laravel is amazingly simple thanks to
-					its {{ HTML::link('docs', 'wonderful documentation') }}.
-				</p>
-
-				<h2>Create something beautiful.</h2>
-
-				<p>
-					Now that you're up and running, it's time to start creating!
-					Here are some links to help you get started:
-				</p>
-
-				<ul class="out-links">
-					<li><a href="http://laravel.com">Official Website</a></li>
-					<li><a href="http://forums.laravel.com">Laravel Forums</a></li>
-					<li><a href="http://github.com/laravel/laravel">GitHub Repository</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-</body>
-</html>
+    <div class="one-half last">
+        <div class="heading_bg"><h2>Limelight</h2></div>
+        <p>A description, thumbnail image, and preview of the latest article can be displayed here. <br /> <br /> <a href="#">Read More >></a></p>
+    </div>
+@endsection
