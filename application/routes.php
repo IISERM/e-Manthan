@@ -33,9 +33,50 @@
 */
 
 Route::get('/', function()
-{
-	return View::make('home.index');
-});
+	{
+		return View::make('home.index');
+	}
+);
+
+Route::get('article', function($id = 1)
+	{
+		$article = Article::find($id);
+
+		// print_r($article->author);
+
+		$authors_names = array();
+		$authors_affiliations = array();
+		$authors_descriptions = array();
+		$authors_imgs = array();
+		
+
+		foreach($article->author as $author)
+		{
+			array_push($authors_names, $author->name);
+			array_push($authors_affiliations, $author->affiliation);
+			array_push($authors_descriptions, $author->description);
+			array_push($authors_imgs, $author->img);
+		}
+
+		// $data = array(
+		// 	'title' => $article->title,
+		// 	'content' => $article->content,
+		// 	'author_names' => $authors_names,
+		// 	'author_affiliations' => $authors_affiliations,
+		// 	'author_descriptions' => $authors_descriptions,
+		// 	'author_imgs' => $authors_imgs
+		// );
+
+		$data = array(
+			'title' => $article->title,
+			'content' => $article->content,
+			'authors' => $article->author,
+			'issues' => $article->issue,
+			'categories' => $article->category,
+			);
+		return View::make('article.default', $data);
+	}
+);
 
 /*
 |--------------------------------------------------------------------------

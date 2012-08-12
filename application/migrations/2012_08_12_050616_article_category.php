@@ -11,6 +11,10 @@ class Article_Category {
 	{
 		Schema::create('article_category', function($table)
 			{
+				// ID
+				$table->increments('id');
+	
+
 					// ID of category
 				$table->integer('category_id');
 

@@ -1,6 +1,6 @@
 <?php
 
-class Article_Author {
+class Create_Issue {
 
 	/**
 	 * Make changes to the database.
@@ -9,19 +9,15 @@ class Article_Author {
 	 */
 	public function up()
 	{
-		Schema::create('article_author', function($table)
+		Schema::create('issues', function($table)
 			{
 				// ID
 				$table->increments('id');
 	
-
-					// ID of author
-				$table->integer('author_id');
-
-					// ID of author
-				$table->integer('article_id');
-
-
+				// Attributes
+					// Categories in category (max 30 characters)
+				$table->string('issue', 30);
+	
 				// Time Stamps
 				$table->timestamps();
 			}
@@ -35,7 +31,7 @@ class Article_Author {
 	 */
 	public function down()
 	{
-		Schema::drop('article_author');
+		Schema::drop('issues');
 	}
 
 }

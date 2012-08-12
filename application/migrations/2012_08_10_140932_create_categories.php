@@ -1,6 +1,7 @@
 <?php
 
-class Create_Categories {
+class Create_Categories
+{
 
 	/**
 	 * Make changes to the database.

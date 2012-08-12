@@ -1,6 +1,6 @@
 <?php
 
-class Article_Author {
+class Article_Issue {
 
 	/**
 	 * Make changes to the database.
@@ -9,14 +9,14 @@ class Article_Author {
 	 */
 	public function up()
 	{
-		Schema::create('article_author', function($table)
+		Schema::create('article_issue', function($table)
 			{
 				// ID
 				$table->increments('id');
 	
 
-					// ID of author
-				$table->integer('author_id');
+					// ID of issue
+				$table->integer('issue_id');
 
 					// ID of author
 				$table->integer('article_id');
@@ -35,7 +35,7 @@ class Article_Author {
 	 */
 	public function down()
 	{
-		Schema::drop('article_author');
+		Schema::drop('article_issue');
 	}
 
 }
