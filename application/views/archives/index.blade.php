@@ -6,6 +6,7 @@
 				<h5>Sort by:</h5>
 			</li>
 			<li class="current"><a class="all" href="#all">All</a></li>
+			
 			<li><a class="formals" href="#formals">Formal</a></li>
 			<li><a class="literature" href="#literature">Literature</a></li>
 			<li><a class="hindi" href="#hindi">Hindi</a></li>

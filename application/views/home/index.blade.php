@@ -16,4 +16,9 @@
         <div class="heading_bg"><h2>Limelight</h2></div>
         <p>A description, thumbnail image, and preview of the latest article can be displayed here. <br /> <br /> <a href="#">Read More >></a></p>
     </div>
+    
+    <div class="one-half last">
+        <div class="heading_bg"><h2>Limelight</h2></div>
+        <p>A description, thumbnail image, and preview of the latest article can be displayed here. <br /> <br /> <a href="#">Read More >></a></p>
+    </div>
 @endsection

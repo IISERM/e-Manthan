@@ -1,4 +1,4 @@
-	   <div id="footer">
+       <div id="footer">
 
     <!-- First Column -->
 
@@ -16,7 +16,7 @@
     
     <div class="one-fourth">
         <h3>e-Manthan</h3>
-        e-Manthan is a fast evolving web version of the IISER Mohali's student magazine - 'Manthan'. This portal was first brought online on the ides of March, 2012.
+        e-Manthan is a fast evolving web version of the IISER Mohali's student magazine - 'Manthan'. This portal was first brought online on the 65th aniversary of the day we gained our freedom 15th August, 2012.
         </div>
     
     <!-- Third Column -->

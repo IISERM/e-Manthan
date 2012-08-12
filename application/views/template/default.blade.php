@@ -2,7 +2,7 @@
 
 <head>
 
-	<title>Welcome to e-Manthan</title>
+	<title>@yield('title')</title>
 	<meta name="keywords" content="Manthan, e-magazine, IISER Mohali">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	
