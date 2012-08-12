@@ -9,7 +9,19 @@ class Create_Categories {
 	 */
 	public function up()
 	{
-		//
+		Schema::create('categories', function($table)
+			{
+				// ID
+				$table->increments('id');
+	
+				// Attributes
+					// Categories in category (max 30 characters)
+				$table->string('category', 30);
+	
+				// Time Stamps
+				$table->timestamps();
+			}
+		);
 	}
 
 	/**
@@ -19,7 +31,7 @@ class Create_Categories {
 	 */
 	public function down()
 	{
-		//
+		Schema::drop('categories');
 	}
 
 }
