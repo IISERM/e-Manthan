@@ -4,37 +4,6 @@
 	
 		public function main()
 		{
-			DB::query('TRUNCATE TABLE categories');
-			
-			$category = new Category(
-				array(
-					'category' => 'Best'
-				)
-			);
-
-			DB::query('TRUNCATE TABLE authors');
-			
-			$author = new Author(
-				array(
-					'name' => 'Gagan Preet Singh',
-					'affiliation' => 'The God of the place',
-					'description' => 'I am the God dude',
-					'img' => 'thumbs/3'
-				)
-			);
-
-			DB::query('TRUNCATE TABLE articles');
-			
-			$article = new Article(
-				array(
-					'title' => 'My Article',
-					'content' => 'The God gives his message',
-					'notes' => 'Note this down dude!!',
-					'thumbnail' => 'thumbs/5',
-					'deleted' => false,
-					'published' => true
-				)
-			);
 
 			DB::query('TRUNCATE TABLE categories');
 			
@@ -44,13 +13,140 @@
 				)
 			);
 
-			$article->save();
-			$author->save();
-			$category->save();
 			$issue->save();
-			$article->author()->attach($author->id);
-			$article->category()->attach($category->id);
-			$article->issue()->attach($issue->id);
+
+			Category::create(
+				array(
+					'category' => 'Campus Buzz'
+				)
+			);
+
+			Category::create(
+				array(
+					'category' => 'Travel'
+				)
+			);
+
+			Category::create(
+				array(
+					'category' => 'Poetry'
+				)
+			);
+
+			Category::create(
+				array(
+					'category' => 'Fiction'
+				)
+			);
+
+			Category::create(
+				array(
+					'category' => 'Food (Yum Yum Yum :) Nom Nom )'
+				)
+			);
+
+			Category::create(
+				array(
+					'category' => 'Non Fiction'
+				)
+			);
+
+			Category::create(
+				array(
+					'category' => 'Art'
+				)
+			);
+
+
+			Category::create(
+				array(
+					'category' => 'Dance'
+				)
+			);
+
+			Category::create(
+				array(
+					'category' => 'Darpan'
+				)
+			);
+
+			Category::create(
+				array(
+					'category' => 'Art Club'
+				)
+			);
+
+			Category::create(
+				array(
+					'category' => 'ASAP (Astro)'
+				)
+			);
+
+			Category::create(
+				array(
+					'category' => 'Phi @ I'
+				)
+			);
+
+			Category::create(
+				array(
+					'category' => 'Curie Club'
+				)
+			);
+
+			Category::create(
+				array(
+					'category' => 'BDF'
+				)
+			);
+
+			Category::create(
+				array(
+					'category' => 'Mathematicians'
+				)
+			);
+
+			Category::create(
+				array(
+					'category' => 'IMQC (Quiz)'
+				)
+			);
+
+			Category::create(
+				array(
+					'category' => 'Deb Soc'
+				)
+			);
+
+			Category::create(
+				array(
+					'category' => 'Official Deb Soc'
+				)
+			);
+
+			Category::create(
+				array(
+					'category' => 'Photography'
+				)
+			);
+
+			Category::create(
+				array(
+					'category' => 'L.C.A'
+				)
+			);
+
+			Category::create(
+				array(
+					'category' => 'Bins and Me'
+				)
+			);
+
+			Category::create(
+				array(
+					'category' => 'IG Nobel'
+				)
+			);
 
 		}
 	}

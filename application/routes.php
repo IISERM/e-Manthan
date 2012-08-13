@@ -38,43 +38,51 @@ Route::get('/', function()
 	}
 );
 
-Route::get('article', function($id = 1)
+Route::get('article', function()
 	{
-		$article = Article::find($id);
+		$article = Article::find(Input::get('id'));
 
 		// print_r($article->author);
 
-		$authors_names = array();
-		$authors_affiliations = array();
-		$authors_descriptions = array();
-		$authors_imgs = array();
-		
-
-		foreach($article->author as $author)
+		if($article != null)
 		{
-			array_push($authors_names, $author->name);
-			array_push($authors_affiliations, $author->affiliation);
-			array_push($authors_descriptions, $author->description);
-			array_push($authors_imgs, $author->img);
-		}
-
-		// $data = array(
-		// 	'title' => $article->title,
-		// 	'content' => $article->content,
-		// 	'author_names' => $authors_names,
-		// 	'author_affiliations' => $authors_affiliations,
-		// 	'author_descriptions' => $authors_descriptions,
-		// 	'author_imgs' => $authors_imgs
-		// );
-
-		$data = array(
-			'title' => $article->title,
-			'content' => $article->content,
-			'authors' => $article->author,
-			'issues' => $article->issue,
-			'categories' => $article->category,
+			$authors_names = array();
+			$authors_affiliations = array();
+			$authors_descriptions = array();
+			$authors_imgs = array();
+			
+	
+			foreach($article->author as $author)
+			{
+				array_push($authors_names, $author->name);
+				array_push($authors_affiliations, $author->affiliation);
+				array_push($authors_descriptions, $author->description);
+				array_push($authors_imgs, $author->img);
+			}
+	
+			// $data = array(
+			// 	'title' => $article->title,
+			// 	'content' => $article->content,
+			// 	'author_names' => $authors_names,
+			// 	'author_affiliations' => $authors_affiliations,
+			// 	'author_descriptions' => $authors_descriptions,
+			// 	'author_imgs' => $authors_imgs
+			// );
+	
+			$data = array(
+				'title' => $article->title,
+				'content' => $article->content,
+				'notes' => $article->notes,
+				'authors' => $article->author,
+				'issues' => $article->issue,
+				'categories' => $article->category,
 			);
-		return View::make('article.default', $data);
+			return View::make('article.default', $data);
+		}
+		else
+		{
+			return Event::first('404');
+		}
 	}
 );
 

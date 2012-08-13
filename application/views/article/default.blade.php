@@ -30,6 +30,11 @@
 		<p>
 			{{ $content }}
 		</p>
+		@if($notes != "")
+			<p>
+				{{ $notes }}
+			</p>
+		@endif
 		@if($categories != null)
 			<h5>
 				Categories : 
